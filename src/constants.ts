@@ -15,8 +15,8 @@ export const SALMON_ACT_FLOW: Flow = {
         bodyText: 'This short guide helps you understand whether your current interaction with a salmon could raise issues under Section 32 of the Salmon Act 1986.\n\nSection 32 applies only if you are handling or in possession of salmon.',
       },
       options: [
-        { id: 'opt-1-1', label: 'Yes — I have or am handling a salmon', targetNodeId: 'node-2', isExternalLink: false },
-        { id: 'opt-1-2', label: 'No — I'm just going about my day', targetNodeId: 'node-no-salmon', isExternalLink: false }
+        { id: 'opt-1-1', label: 'Yes - I have or am handling a salmon', targetNodeId: 'node-2', isExternalLink: false },
+        { id: 'opt-1-2', label: 'No - I am just going about my day', targetNodeId: 'node-no-salmon', isExternalLink: false }
       ]
     },
     {
@@ -25,7 +25,7 @@ export const SALMON_ACT_FLOW: Flow = {
       position: { x: 800, y: 250 },
       content: {
         title: 'No issue identified',
-        bodyText: 'If you're not handling or possessing salmon, Section 32 does not apply. You're free to continue minding your own business.',
+        bodyText: 'If you are not handling or possessing salmon, Section 32 does not apply. You are free to continue minding your own business.',
       },
       options: [
         { id: 'opt-no-1', label: 'Start Over', targetNodeId: 'node-1', isExternalLink: false }
@@ -50,8 +50,8 @@ export const SALMON_ACT_FLOW: Flow = {
       type: 'information',
       position: { x: 50, y: 500 },
       content: {
-        title: 'Compliant — legitimate source',
-        bodyText: 'Salmon purchased from a licensed retailer or caught personally with a valid licence is generally not considered suspicious. Based on what you've said, no issue is apparent under Section 32.',
+        title: 'Compliant - legitimate source',
+        bodyText: 'Salmon purchased from a licensed retailer or caught personally with a valid licence is generally not considered suspicious. Based on what you have said, no issue is apparent under Section 32.',
       },
       options: []
     },
@@ -64,8 +64,8 @@ export const SALMON_ACT_FLOW: Flow = {
         bodyText: 'An offence can arise if you believe, or it would be reasonable to believe, that the salmon was illegally obtained.',
       },
       options: [
-        { id: 'opt-risk-1', label: 'Yes — I suspect it may be illegal', targetNodeId: 'node-illegal', isExternalLink: false },
-        { id: 'opt-risk-2', label: 'No — but I can't be completely sure', targetNodeId: 'node-doubt', isExternalLink: false }
+        { id: 'opt-risk-1', label: 'Yes - I suspect it may be illegal', targetNodeId: 'node-illegal', isExternalLink: false },
+        { id: 'opt-risk-2', label: 'No - but I cannot be completely sure', targetNodeId: 'node-doubt', isExternalLink: false }
       ]
     },
     {
@@ -77,9 +77,9 @@ export const SALMON_ACT_FLOW: Flow = {
         bodyText: 'Handling salmon you caught yourself is only lawful if it was taken in accordance with licensing and fishing regulations.',
       },
       options: [
-        { id: 'opt-catch-1', label: 'Yes — I have a valid rod licence', targetNodeId: 'node-safe', isExternalLink: false },
-        { id: 'opt-catch-2', label: 'No — I don't have one', targetNodeId: 'node-help-links', isExternalLink: false },
-        { id: 'opt-catch-3', label: 'I'm not sure', targetNodeId: 'node-help-links', isExternalLink: false }
+        { id: 'opt-catch-1', label: 'Yes - I have a valid rod licence', targetNodeId: 'node-safe', isExternalLink: false },
+        { id: 'opt-catch-2', label: 'No - I do not have one', targetNodeId: 'node-help-links', isExternalLink: false },
+        { id: 'opt-catch-3', label: 'I am not sure', targetNodeId: 'node-help-links', isExternalLink: false }
       ]
     },
     {
@@ -87,7 +87,7 @@ export const SALMON_ACT_FLOW: Flow = {
       type: 'information',
       position: { x: 200, y: 750 },
       content: {
-        title: 'High risk — suspicious circumstances',
+        title: 'High risk - suspicious circumstances',
         bodyText: 'You may be in breach of Section 32 of the Salmon Act 1986. Handling salmon where you know or reasonably believe it was illegally taken is an offence and may carry criminal penalties.',
       },
       options: []
@@ -97,8 +97,8 @@ export const SALMON_ACT_FLOW: Flow = {
       type: 'information',
       position: { x: 500, y: 750 },
       content: {
-        title: 'At risk — further checks required',
-        bodyText: 'Even without actual knowledge, the law applies a reasonable belief standard. If the circumstances are suspicious, you should verify the salmon's origin immediately.',
+        title: 'At risk - further checks required',
+        bodyText: 'Even without actual knowledge, the law applies a reasonable belief standard. If the circumstances are suspicious, you should verify the salmon origin immediately.',
       },
       options: []
     },
@@ -107,8 +107,8 @@ export const SALMON_ACT_FLOW: Flow = {
       type: 'information',
       position: { x: 800, y: 750 },
       content: {
-        title: 'At risk — licensing issue',
-        bodyText: 'Handling salmon without a valid licence may be unlawful. If you're unsure, you should verify your licensing status before proceeding.',
+        title: 'At risk - licensing issue',
+        bodyText: 'Handling salmon without a valid licence may be unlawful. If you are unsure, you should verify your licensing status before proceeding.',
       },
       options: [
         { id: 'opt-help-1', label: 'Go to GOV.UK Fishing Licenses', targetNodeId: null, isExternalLink: true, externalUrl: 'https://www.gov.uk/fishing-licences' },
@@ -120,7 +120,7 @@ export const SALMON_ACT_FLOW: Flow = {
 
 export const GIFT_REGISTER_FLOW: Flow = {
   id: 'gift-register',
-  title: 'Gift Register & Compliance',
+  title: 'Gift Register and Compliance',
   description: 'Guidance on when to record gifts and hospitality.',
   startNodeId: 'gift-node-1',
   nodes: [
@@ -142,11 +142,11 @@ export const GIFT_REGISTER_FLOW: Flow = {
       position: { x: 0, y: 0 },
       content: {
         title: 'Threshold Check',
-        bodyText: 'Is the estimated value of the gift or hospitality over £100?',
+        bodyText: 'Is the estimated value of the gift or hospitality over 100 GBP?',
       },
       options: [
-        { id: 'gift-opt-2-1', label: "Yes, it's over £100", targetNodeId: 'gift-node-3', isExternalLink: false },
-        { id: 'gift-opt-2-2', label: "No, it's £100 or under", targetNodeId: 'gift-node-4', isExternalLink: false }
+        { id: 'gift-opt-2-1', label: 'Yes, it is over 100 GBP', targetNodeId: 'gift-node-3', isExternalLink: false },
+        { id: 'gift-opt-2-2', label: 'No, it is 100 GBP or under', targetNodeId: 'gift-node-4', isExternalLink: false }
       ]
     },
     {
@@ -155,7 +155,7 @@ export const GIFT_REGISTER_FLOW: Flow = {
       position: { x: 0, y: 0 },
       content: {
         title: 'Registration Required',
-        bodyText: 'Gifts over £100 must be recorded on the Intranet Gift Register within 7 days of receipt to ensure transparency and avoid conflicts of interest.',
+        bodyText: 'Gifts over 100 GBP must be recorded on the Intranet Gift Register within 7 days of receipt to ensure transparency and avoid conflicts of interest.',
       },
       options: [
         { id: 'gift-opt-3-1', label: 'Open Gift Register (Intranet)', targetNodeId: null, isExternalLink: true, externalUrl: 'https://intranet.example/gift-register' }
@@ -167,7 +167,7 @@ export const GIFT_REGISTER_FLOW: Flow = {
       position: { x: 0, y: 0 },
       content: {
         title: 'No Registration Required',
-        bodyText: 'Gifts under £100 generally do not need to be registered. However, always ensure the gift is appropriate and does not create a conflict of interest. If offered by a vendor currently in a tender process, you must decline regardless of value.',
+        bodyText: 'Gifts under 100 GBP generally do not need to be registered. However, always ensure the gift is appropriate and does not create a conflict of interest. If offered by a vendor currently in a tender process, you must decline regardless of value.',
       },
       options: []
     }
