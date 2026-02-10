@@ -11,7 +11,7 @@ const STORAGE_KEY = "decisionFlowApp.flows";
 
 const App: React.FC = () => {
   // Modes
-  const [uiMode, setUiMode] = useState<UIMode>('lawyer');
+  const [uiMode, setUiMode] = useState<UIMode>('user');
   const [viewMode, setViewMode] = useState<ViewMode>('editor');
   const [lawyerSubView, setLawyerSubView] = useState<'dashboard' | 'editor'>('dashboard');
   
