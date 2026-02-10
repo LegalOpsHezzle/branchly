@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { Flow, FlowNode, Position, NodeType } from '../../types';
+import { Flow, Position, NodeType } from '../../types';
 import { Connection } from './Connection';
 import { Plus, Layout } from '../Icons';
 
