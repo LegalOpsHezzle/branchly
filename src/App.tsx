@@ -301,17 +301,19 @@ const App: React.FC = () => {
       <div className="flex-1 flex overflow-hidden">
         {uiMode === 'lawyer' ? (
           lawyerSubView === 'editor' && flow ? (
-            <>
-              <Canvas 
-                flow={flow}
-                selectedNodeId={selectedNodeId}
-                onNodeSelect={setSelectedNodeId}
-                onNodeMove={handleMoveNode}
-                onAddNode={handleAddNode}
-                onAutoLayout={handleAutoLayout}
-              />
-              {selectedNode && (
-                <Sidebar 
+     <>
+              {viewMode !== 'player' && (
+                <Canvas 
+                  flow={flow}
+                  selectedNodeId={selectedNodeId}
+                  onNodeSelect={setSelectedNodeId}
+                  onNodeMove={handleMoveNode}
+                  onAddNode={handleAddNode}
+                  onAutoLayout={handleAutoLayout}
+                />
+              )}
+              {viewMode !== 'player' && selectedNode && (
+                <Sidebar
                   node={selectedNode}
                   flow={flow}
                   onUpdate={handleUpdateNode}
